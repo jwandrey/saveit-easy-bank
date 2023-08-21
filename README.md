@@ -1,6 +1,6 @@
-![saveit easy bank logo](images/easy-bank.png)
+![saveit easy bank banner](images/easy-bank.png)
 
-# saveit - Easy Bank
+## saveit - easy bank
 
 ## 🚀 O start
 
