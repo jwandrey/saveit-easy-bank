@@ -17,7 +17,9 @@ Trata-se de uma API para um Banco Digital fictício, que chamei de saveit, com a
 -   Consultar saldo da conta bancária
 -   Emitir extrato bancário
 
-Foi utilizada a notação JSON, que permite estruturar dados em formato texto para serem utilizados em diferentes tipos de sistemas. É um formato simples, que oferece vários benefícios, como maior velocidade no tráfego em rede e mais agilidade no processamento.
+Foi utilizado o framework Express, que serve para o desenvolvimento de aplicações web em Node.js de forma eficiente e organizada, e a notação JSON, que permite estruturar dados em formato texto para serem utilizados em diferentes tipos de sistemas. É um formato simples, que oferece vários benefícios, como maior velocidade no tráfego em rede e mais agilidade no processamento.
+
+![index](images/index.png)
 
 ## 🎯 Definindo as rotas
 
