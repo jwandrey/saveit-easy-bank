@@ -1,9 +1,9 @@
 module.exports = {
     banco: {
-        nome: 'Cubos Bank',
+        nome: 'saveit',
         numero: '123',
         agencia: '0001',
-        senha: 'Cubos123Bank'
+        senha: 'Easy123Bank'
     },
     contas: [],
     saques: [],

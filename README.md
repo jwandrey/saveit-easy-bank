@@ -17,39 +17,59 @@ Trata-se de uma API para um Banco Digital fictício, que chamei de saveit, com a
 -   Consultar saldo da conta bancária
 -   Emitir extrato bancário
 
+Foi utilizada a notação JSON, que permite estruturar dados em formato texto para serem utilizados em diferentes tipos de sistemas. É um formato simples, que oferece vários benefícios, como maior velocidade no tráfego em rede e mais agilidade no processamento.
+
 ## 🎯 Definindo as rotas
+
+Através das rotas, foi definida cada URL da API, cada uma com sua própria funcionalidade. Utilizando o framework Express, os verbos http utilizados foram Get, Post, Put e Delete. 
 
 ![rotas](images/rotas.png)
 
 ```
-//listar contas bancárias - query params
+//rota listar-contas
+//http://localhost:3333/contas?senha_banco=Easy123Bank
 
 rotas.get('/contas', validarSenhaBanco, listarContas);
-
 ```
 
 ## ⚙️ Incluindo validações
 
+Como a API desenvolvida é um sistema bancário, para acessar cada funcionalidade precisamos incluir validações, entre elas conferências de dados e controles de acesso com senhas. Minha estratégia foi utilizar essas validações como Middlewares (ou intermediários), afim de otimizar o código e evitar repetições excessivas. Os Middlewares são informados em cada rota diferente, de acordo com as validações necessárias.
+
 ![código validação cpf](images/validarCpf.png)
 
-![código validação saque](images/validarSaque.png)
-
 ```
-Dar exemplos
+//middleware de validação de cpf, um dos utilizados na rota criar-conta
+//http://localhost:3333/contas
+
+rotas.post('/contas', validarNome, validarCpf, validarDataNasc, validarTelefone, validarEmail, validarSenhaConta, criarConta);
 ```
 
 ### 🔩 Criando controladores
 
-![código criar conta](images/criarConta.png)
+Os controladores foram organizados e divididos em contas, transacoes, e usuarios. Cada controlador reúne as funções relativas ao seu escopo. Esse tipo de organização facilita a leitura do código de forma geral, pois 'categoriza' as informações.
 
-![código excluir conta](images/excluirConta.png)
+Em contas, encontram-se as funções: listarContas, criarConta, excluirConta, obterSaldo, e obterExtrato.
 
 ![código obter extrato](images/obterExtrato.png)
 
+Em transacoes, encontram-se as funções: depositar, sacar e transferir.
+
 ![código transferencias](images/transacoesTransf.png)
 
+Em usuarios, encontra-se a função: atualizarUsuario.
+
 ```
-Dar exemplos
+//trecho da função atualizarUsuario
+//http://localhost:3333/contas/1/usuario
+
+    //sobrescreve as propriedades do objeto conta pelas propriedades informadas no body
+    usuario.nome = nome;
+    usuario.cpf = cpf;
+    usuario.data_nascimento = data_nascimento;
+    usuario.telefone = telefone;
+    usuario.email = email;
+    usuario.senha = senha;
 ```
 
 ## 🛠️ Construído com
