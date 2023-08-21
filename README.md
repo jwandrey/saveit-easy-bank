@@ -22,7 +22,10 @@ Trata-se de uma API para um Banco Digital fictício, que chamei de saveit, com a
 ![rotas](images/rotas.png)
 
 ```
-Dar exemplos
+//listar contas bancárias - query params
+
+rotas.get('/contas', validarSenhaBanco, listarContas);
+
 ```
 
 ## ⚙️ Incluindo validações
