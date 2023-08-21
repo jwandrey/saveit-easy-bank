@@ -16,12 +16,13 @@ Trata-se de uma API para um Banco Digital fictício, que chamei de saveit, com a
 -   Emitir extrato bancário
 
 Foi utilizado o framework Express, que serve para o desenvolvimento de aplicações web em Node.js de forma eficiente e organizada, e a notação JSON, que permite estruturar dados em formato texto para serem utilizados em diferentes tipos de sistemas. É um formato simples, que oferece vários benefícios, como maior velocidade no tráfego em rede e mais agilidade no processamento.
+Para testar cada endpoint foi utilizado o Insomnia, uma ferramenta que simplifica o processo de fazer solicitações http durante o desenvolvimento.
 
 ![index](img/index.png)
 
 ## 🎯 Definindo as rotas
 
-Através das rotas, foi definida cada URL da API, cada uma com sua própria funcionalidade. Utilizando o framework Express, os verbos http utilizados foram Get, Post, Put e Delete. 
+Através das rotas, foi definida cada URL da API, cada uma com sua própria funcionalidade. Utilizando o framework Express, os verbos http utilizados foram Get, Post, Put e Delete.
 
 ![rotas](img/rotas.png)
 
